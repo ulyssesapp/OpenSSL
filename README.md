@@ -73,3 +73,7 @@ You want to ensure Xcode knows;
 1. Where the OpenSSL static libraries are located.
 2. Where the OpenSSL header files are located for the C include statements.
 Inside your workspace, go to the Target (not the Project).  The Target is the C app that is produced after a successful build. Select `Build Phases` and `Link Binary With Libraries`.  Select `+` and navigate to the static OpenSSL libraries that was included in the framework.  The magical result was, your `Target` and `Building Settings` `Library Search Paths` were populated without you typing anything. Now go to the  Target.  In `Build Settings` set the `Always Search User Paths` to `Yes`. Then add a new entry to the `User Header Search Paths`. This should be the location of the OpenSSL header files that were included in OpenSSLUniversal.
+
+
+## Manual Rebuild
+You can manually rebuild everything by running `build.sh`. It will automatically download OpenSSL sources and build them for all macOS and iOS targets. If automatic downloading does not succeed, you can download OpenSSL manually and place it as `openssl-VERSION.tar.gz` (e.g. `openssl-1.1.1h.tar.gz`) into the source folder.

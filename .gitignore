@@ -1,5 +1,7 @@
 *.DS_Store
 
+.vscode/
+.build/
 build/
 DerivedData/
 xcuserdata/
@@ -22,5 +24,6 @@ xcuserdata/
 
 Carthage/
 
+Frameworks/OpenSSL.xcframework.zip
 *.tar.gz
 *.tar.gz.sha256
